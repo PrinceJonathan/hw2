@@ -11,11 +11,11 @@ var newItem = (item) => {
 }
 
 $('#query').on('click', function() {
-    $.get('https://kchen.teach.github.io/hw2/product.json', function(response) {
+    $.get('https://princejonathan.github.io/hw2/product.json', function(response) {
         if (response) {
             // 伺服器有回傳資料
             if (response.result) {
-                $('product-list').empty();
+                $('#product-list').empty();
                 // 資料庫有回傳資料
                 var items = response.data
                 for (var i = 0; i < items.length; i++) {
