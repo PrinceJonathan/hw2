@@ -20,7 +20,10 @@ body {
     font-size: 14px;
     font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
     color: #212121;
-    margin: 0 20px 3px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
     line-height: 1.5;
     text-align: center;
 }
@@ -44,6 +47,7 @@ body {
 }
 
 .item {
+    height: 300px;
     position: relative;
     border: none;
     background: #fff;
@@ -61,12 +65,9 @@ body {
     padding-right: 0px;
 }
 
-
-/* 動畫效果 */
-
 .item:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
-    transform: translate3d(0, -2px, 0);
+    transform: translate3d(-5px, -5px, 0);
     transition-delay: 0s;
     transition-duration: 0.2s;
     transition-property: all;

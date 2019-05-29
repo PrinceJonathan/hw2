@@ -20,33 +20,55 @@
             <h1>作業二 - 電商前端應用</h1>
         </div>
 
+        <!-- 工具列 -->
         <div class="form-group row">
-
             <div class="col">
                 <button id="query" type="button" class="btn btn-primary">查詢</button>
             </div>
         </div>
 
+        <!-- 產品列表 -->
         <div class="row" id="product-list">
             <div class="col-*">
                 <div class="item">
-                    <img class="image" src="https://fakeimg.pl/160x160/" alt="">
-                    <h3 class="name">Infinity Glove</h3>
+                    <img class="image" src="https://fakeimg.pl/160x160/" alt="" srcset="">
+                    <h3 class="name">產品一</h3>
                     <p class="price">NT$ 999</p>
                 </div>
             </div>
             <div class="col-*">
                 <div class="item">
-                    <img class="image" src="https://fakeimg.pl/160x160/" alt="">
-                    <h3 class="name">Ironman Suit</h3>
+                    <img class="image" src="https://fakeimg.pl/160x160/" alt="" srcset="">
+                    <h3 class="name">產品二</h3>
                     <p class="price">NT$ 999</p>
                 </div>
             </div>
         </div>
 
+        <!-- 分頁 -->
+        <div class="row" id="page">
+            <div class="col">
+                <nav aria-label="Page navigation example">
+                    <ul id="page-number" class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <!-- 頁尾 -->
         <footer>
             <div class="text-center">
-                2019 &copy; JonaLee@NTU
+                2019 &copy; kChen@NTU
             </div>
         </footer>
     </div>
@@ -69,6 +91,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- 引入 Bootstrap 的 JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
