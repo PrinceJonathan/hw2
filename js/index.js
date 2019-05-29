@@ -22,7 +22,11 @@ $(document).ready(function() {
         $h3 = $('<h3>').attr('class', 'name').text(item.name)
         $p = $('<p>').attr('class', 'price').text('NT$ ' + item.price)
 
-        $item = $('<div>').attr('class', 'item').append($img).append($h3).append($p)
+        $flipCardFront = $('<div>').attr('class', 'flip-card-front').append($img)
+        $flipCardEnd = $('<div>').attr('class', 'flip-card-back').append($h3).append($p)
+
+        $flipCardInner = $('<div>').attr('class', 'flip-card-inner').append($flipCardFront).append($flipCardEnd)
+        $item = $('<div>').attr('class', 'item').addClass('flip-card').append($flipCardInner)
         $col = $('<div>').attr('class', 'col-*').append($item)
 
         $('#product-list').append($col)
@@ -59,7 +63,7 @@ $(document).ready(function() {
     }
 
     $('#query').on('click', function() {
-        $.get('https://js.kchen.club/B12345678/query', function(response) {
+        $.get('https://js.kchen.club/B04502062/query', function(response) {
             if (response) {
                 // 伺服器有回傳資料
                 if (response.result) {
