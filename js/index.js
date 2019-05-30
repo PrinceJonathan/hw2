@@ -20,7 +20,7 @@ $(document).ready(function() {
     var newItem = (item) => {
         $img = $('<img>').attr('class', 'image').attr('src', item.image)
         $h3 = $('<h3>').attr('class', 'name').text(item.name)
-        $p = $('<p>').attr('class', 'price').text('NT$ ' + item.price)
+        $p = $('<p>').attr('class', 'price').text('ATK: ' + item.price)
 
         $flipCardFront = $('<div>').attr('class', 'flip-card-front').append($img)
         $flipCardEnd = $('<div>').attr('class', 'flip-card-back').append($h3).append($p)
@@ -52,8 +52,7 @@ $(document).ready(function() {
                 showItems(Number(i))
             })
 
-            var strActive = ((i == 1) ? ' active' : '')
-            $li = $('<li>').attr('class', 'page-item' + strActive).append($a)
+            $li = $('<li>').attr('class', 'page-item').append($a)
             $('#page-number').append($li)
         }
 

@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="./css/index.css">
     <!-- card.css 自訂 -->
     <link rel="stylesheet" href="./css/card.css">
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -36,7 +31,8 @@
                         <a class="nav-link" href="index.html">Avengers Assemble!</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./insert.html">Create a new avenger</a>
+                        <a id="create" class="nav-link" href="#">Create a new avenger</a>
+                        <hr>
                     </li>
                 </ul>
             </div>
@@ -67,35 +63,14 @@
             </div>
         </div>
 
+        <!-- 薩諾斯 -->
+        <div id="Thanos" data-dis-type="simultaneous" data-dis-particle-type="thanosSnap" data-dis-reduction-factor="10"></div>
+
+
         <!-- 產品列表 -->
         <div class="row" id="product-list">
-            <div class="col-*">
-                <div class="item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img class="image" src="./img/Avengers.jpg" alt="Avatar">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3 class="name">產品一</h3>
-                            <p class="price">NT$ 999</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-*">
-                <div class="item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img class="image" src="./img/Avengers.jpg" alt="Avatar">
-                        </div>
-                        <div class="flip-card-back">
-                            <h3 class="name">產品二</h3>
-                            <p class="price">NT$ 999</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+
 
         <!-- 分頁 -->
         <div class="row" id="page">
@@ -152,6 +127,28 @@
 
     <!-- 引入我們自己寫的 JavaScript -->
     <script src="./js/index.js"></script>
+
+    <script src="./js/disintegrate.js"></script>
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="./js/snap.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#create').click(function(e) {
+                $('#page').hide()
+                $('#query').hide()
+                $('#Thanos').hide()
+                e.preventDefault();
+                htmlObj = $.ajax({
+                    url: "insert.html",
+                    async: false
+
+
+                });
+                $('#product-list').html(htmlObj.responseText)
+            });
+        });
+    </script>
 </body>
 
 </html>
