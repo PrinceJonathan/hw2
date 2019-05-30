@@ -61,7 +61,8 @@ $(document).ready(function() {
         $('#page-number').append($rli)
     }
 
-    $('#query').on('click', function() {
+    $('#infinityGlove').on('click', function() {
+        $('#fingerText').hide()
         $.get('https://js.kchen.club/B04502062/query', function(response) {
             if (response) {
                 // 伺服器有回傳資料
