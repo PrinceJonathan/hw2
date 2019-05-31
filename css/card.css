@@ -30,20 +30,26 @@
     background-color: #151515;
     color: black;
     z-index: 2;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .flip-card-back {
-    background-color: #f1f3f5;
+    background-color: #e4e6e9;
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
     z-index: 1;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    border-radius: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .name {
-    font-size: 14px;
-    font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+    font-size: 20px;
+    font-family: "Impact";
     color: #212121;
     margin: auto;
     line-height: 1.5;
@@ -51,9 +57,9 @@
 }
 
 .price {
-    color: #ff6709;
+    color: #f34239;
     font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 14px;
     line-height: 1.5;
     text-align: center;
@@ -63,6 +69,12 @@
 .image {
     width: 160px;
     height: 200px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 22px;
+    border-radius: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
 }
