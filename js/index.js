@@ -20,11 +20,16 @@ $(document).ready(function() {
     var newItem = (item) => {
         $img = $('<img>').attr('class', 'image').attr('src', item.image)
         $h3 = $('<h3>').attr('class', 'name').text(item.name)
+        $buttonHero = $('<button>').attr('class', 'btn btn-primary').attr('data-toggle', 'modal').attr('data-target', '#exampleModal').text('Your Hero')
         $p = $('<p>').attr('class', 'price').text('ATK: ' + item.price)
 
-        $flipCardFront = $('<div>').attr('class', 'flip-card-front').append($img)
-        $flipCardEnd = $('<div>').attr('class', 'flip-card-back').append($h3).append($p)
+        document.getElementById('heroName').innerHTML = item.name;
+        document.getElementById('heroAtk').innerHTML = item.price;
+        var obj = document.getElementById('modal-img');　　
+        obj.src = item.image;
 
+        $flipCardFront = $('<div>').attr('class', 'flip-card-front').append($img)
+        $flipCardEnd = $('<div>').attr('class', 'flip-card-back').append($h3).append($buttonHero).append($p)
         $flipCardInner = $('<div>').attr('class', 'flip-card-inner').append($flipCardFront).append($flipCardEnd)
         $item = $('<div>').attr('class', 'item').addClass('flip-card').append($flipCardInner)
         $col = $('<div>').attr('class', 'col-*').append($item)

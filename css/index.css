@@ -6,6 +6,10 @@ h1 {
     font-family: Impact;
 }
 
+h2 {
+    font-size: 1.5rem;
+}
+
 a {
     text-decoration: none;
     color: #ffff;
@@ -55,6 +59,22 @@ label {
     padding-right: 0px;
 }
 
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#modal-img {
+    width: 160px;
+    height: 200px;
+}
+
 #fingerText {
     font-family: Comic Sans MS;
     font-size: 30px;
@@ -65,7 +85,7 @@ label {
     width: 150px;
     height: 250px;
     margin-bottom: 30px;
-    background-image: url(../img/infinity\ globe.png);
+    background-image: url(../img/infinity\ glove.png);
     background-size: cover;
 }
 
