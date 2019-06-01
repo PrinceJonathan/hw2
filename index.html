@@ -55,6 +55,12 @@
     </header>
 
     <div class="container">
+        <div id="search-bar" class="input-group mb-3">
+            <input id="input-text" type="text" class="form-control" placeholder="Hero's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button id="input" class="btn btn-outline-secondary" type="button" data-toggle="modal" data-target="#exampleModal">Search</button>
+            </div>
+        </div>
 
         <!-- 薩諾斯 -->
         <div class="row" style="flex-direction: column; align-items: center;">
@@ -88,7 +94,7 @@
         </div>
 
         <!-- 卡片背面Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -100,10 +106,10 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img id="modal-img" src="/img/infinity glove.png" alt="">
+                        <img id="modal-img" src="/img/Nick Fury.jpg" alt="">
                         <div class="text-modal">
-                            <h2 id="heroName">Name: Iron man</h2>
-                            <h2 id="heroAtk">Atk: 100000</h2>
+                            <h2 id="heroName">Sorry,</h2>
+                            <h2 id="heroAtk">Being Snapped</h2>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -157,6 +163,7 @@
     <script defer src="./js/html2canvas.min.js"></script>
     <script defer src="./js/disintegrate.js"></script>
     <script defer src="./js/snap.js"></script>
+    <script src="./js/modal.js"></script>
 
     <script>
         $(document).ready(function() {
