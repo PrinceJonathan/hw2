@@ -40,7 +40,7 @@ $(document).ready(function() {
                             document.getElementById('heroName').innerHTML = 'Sorry,';
                             document.getElementById('heroAtk').innerHTML = 'Being Snapped';
                             var obj = document.getElementById('modal-img');　　
-                            obj.src = '../img/NickFury.jpg';
+                            obj.src = 'https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/01/01/Pictures/_c23a1f10-0db8-11e9-b03e-d829a175bb22.jpeg';
                             $('#exampleModal').modal('show')
                             console.log('英雄尚未招募')
                         }
