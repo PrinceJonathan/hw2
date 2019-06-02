@@ -19,6 +19,7 @@ $(document).ready(function() {
         }
     }
 
+    // 搜尋 item 有沒有存在於 items 中
     $('#input').on('click', () => {
         var name = $('#input-text').val()
         $.get('https://js.kchen.club/B04502062/query', function(response) {
@@ -36,8 +37,12 @@ $(document).ready(function() {
                             console.log('英雄在此')
                             break
                         } else {
-                            console.log('英雄尚未招募')
+                            document.getElementById('heroName').innerHTML = 'Sorry,';
+                            document.getElementById('heroAtk').innerHTML = 'Being Snapped';
+                            var obj = document.getElementById('modal-img');　　
+                            obj.src = '../img/NickFury.jpg';
                             $('#exampleModal').modal('show')
+                            console.log('英雄尚未招募')
                         }
                     }
 

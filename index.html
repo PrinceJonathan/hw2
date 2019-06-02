@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <!-- 卡片背面Modal -->
+        <!-- 搜尋結果Modal -->
         <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -106,10 +106,10 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img id="modal-img" src="/img/Nick Fury.jpg" alt="">
+                        <img id="modal-img" src="" alt="">
                         <div class="text-modal">
-                            <h2 id="heroName">Sorry,</h2>
-                            <h2 id="heroAtk">Being Snapped</h2>
+                            <h2 id="heroName"></h2>
+                            <h2 id="heroAtk"></h2>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -163,7 +163,6 @@
     <script defer src="./js/html2canvas.min.js"></script>
     <script defer src="./js/disintegrate.js"></script>
     <script defer src="./js/snap.js"></script>
-    <script src="./js/modal.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -172,6 +171,7 @@
                 $('#infinityGlove').hide()
                 $('#fingerText').hide()
                 $('#page').hide()
+                $('#search-bar').hide()
                 e.preventDefault();
                 htmlObj = $.ajax({
                     url: "insert.html",
